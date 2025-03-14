@@ -1,9 +1,14 @@
 "use client";
 
+
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaHome } from "react-icons/fa";
 import { GiPrayerBeads } from "react-icons/gi";
+import Image from 'next/image';
+import Link from 'next/link';
+
 
 const misterios = [
   { title: "Primeiro Mistério Gozozo", description: "Anunciação, a Visitação, o Nascimento, a Apresentação de Jesus no Templo e a Perda e Encontro de Jesus no Templo" },
@@ -16,12 +21,15 @@ const misterios = [
 export default function TercoMariano() {
   const [selectedMisterio, setSelectedMisterio] = useState(null);
 
+  
   return (
     <div className="min-h-screen relative flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 text-gray-800 overflow-hidden p-6">
-      <img
+      <Image
         src="/virgn-mary.jpeg"
         alt="Virgem Maria"
-        className="absolute inset-0 object-cover w-full opacity-20"
+        layout="fill"
+        objectFit="cover"
+        className="opacity-20"
       />
 
       <div className="relative z-10 flex flex-col items-center">
@@ -46,7 +54,7 @@ export default function TercoMariano() {
         <AnimatePresence>
           {selectedMisterio && (
             <motion.div
-              className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-6"
+              className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center p-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -59,20 +67,19 @@ export default function TercoMariano() {
                 exit={{ scale: 0.8 }}
                 onClick={(e) => e.stopPropagation()}
               >
-                <h2 className="text-2xl font-bold mb-4">{selectedMisterio.title}</h2>
+                <h2 className="text-2xl font-bold mb-2">{selectedMisterio.title}</h2>
                 <p className="text-gray-700 mb-4">{selectedMisterio.description}</p>
 
                 <a
                   href="https://artsandculture.google.com/"
-                  className="text-blue-500 underline hover:text-blue-700 block mb-4"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  className="text-blue-500 underline hover:text-blue-700 block mb-4"
                 >
-                  Meditação com arte sacra
+                  Meditação com Arte Sacra
                 </a>
 
                 <button
-                  className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded"
+                  className="mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded"
                   onClick={() => setSelectedMisterio(null)}
                 >
                   Fechar
@@ -82,9 +89,9 @@ export default function TercoMariano() {
           )}
         </AnimatePresence>
 
-        <a href="/" className="mt-8 flex items-center gap-2 text-blue-700 hover:text-blue-800">
+        <Link href="/" className="mt-8 flex items-center gap-2 text-blue-700 hover:text-blue-800">
           <FaHome size={24} /> Voltar para Home
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -4,7 +4,9 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaHome } from "react-icons/fa";
 import { GiPrayerBeads } from "react-icons/gi";
+import Image from 'next/image';
 
+import Link from 'next/link';
 const misterios = [
   { title: "Primeiro Mistério Gozozo", description: "Anunciação, a Visitação, o Nascimento, a Apresentação de Jesus no Templo e a Perda e Encontro de Jesus no Templo", link: "https://pt.wikipedia.org/wiki/Anuncia%C3%A7%C3%A3o#/media/Ficheiro:Botticelli,_annunciazione_del_Metropolitan.jpg" },
   { title: "Segundo Mistério Gozozo", description: "Visita de Maria à sua prima Isabel.", link: "https://i.pinimg.com/736x/47/c9/77/47c97799a3b452ff9b2e98ceccc7474e.jpg "},
@@ -18,11 +20,12 @@ export default function TercoMariano() {
 
   return (
     <div className="min-h-screen relative flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 text-gray-800 overflow-hidden p-6">
-      <img
-        src="/virgn-mary.jpeg"
-        alt="Virgem Maria"
-        className="absolute inset-0 object-cover w-full h-full opacity-20"
-      />
+      <Image
+  src="/virgn-mary.jpeg"
+  alt="Virgem Maria"
+  fill
+  className="absolute inset-0 object-cover opacity-20"
+/>
 
       <div className="relative z-10 flex flex-col items-center">
         <h1 className="text-4xl font-bold mb-4">Rosário</h1>
@@ -82,9 +85,9 @@ export default function TercoMariano() {
           )}
         </AnimatePresence>
 
-        <a href="/" className="mt-8 flex items-center gap-2 text-blue-700 hover:text-blue-800">
-          <FaHome size={24} /> Voltar para Home
-        </a>
+        <Link href="/" className="mt-8 flex items-center gap-2 text-blue-700 hover:text-blue-800">
+  <FaHome size={24} /> Voltar para Home
+</Link>
       </div>
     </div>
   );
