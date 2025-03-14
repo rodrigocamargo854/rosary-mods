@@ -1,7 +1,5 @@
 "use client";
 
-
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaHome } from "react-icons/fa";
@@ -9,19 +7,48 @@ import { GiPrayerBeads } from "react-icons/gi";
 import Image from 'next/image';
 import Link from 'next/link';
 
-
 const misterios = [
-  { title: "Primeiro Mistério Gozozo", description: "Anunciação, a Visitação, o Nascimento, a Apresentação de Jesus no Templo e a Perda e Encontro de Jesus no Templo" },
-  { title: "Segundo Mistério Gozozo", description: "Visita de Maria à sua prima Isabel." },
-  { title: "Terceiro Mistério Gozozo", description: "Nascimento de Jesus Cristo em Belém." },
-  { title: "Quarto Mistério Gozozo", description: "Apresentação do Menino Jesus no Templo." },
-  { title: "Quinto Mistério Gozozo", description: "Encontro de Jesus no Templo, depois de ter sido perdido pelos seus pais." },
+  {
+    grupo: "Mistérios Gozosos", misterios: [
+      { title: "Primeiro Mistério Gozozo", description: "Anunciação, a Visitação, o Nascimento, a Apresentação de Jesus no Templo e a Perda e Encontro de Jesus no Templo", link: "https://pt.wikipedia.org/wiki/Anuncia%C3%A7%C3%A3o#/media/Ficheiro:Botticelli,_annunciazione_del_Metropolitan.jpg" },
+      { title: "Segundo Mistério Gozozo", description: "Visita de Maria à sua prima Isabel.", link: "https://i.pinimg.com/736x/47/c9/77/47c97799a3b452ff9b2e98ceccc7474e.jpg " },
+      { title: "Terceiro Mistério Gozozo", description: "Nascimento de Jesus em Belém.", link: "https://artsandculture.google.com/story/cQVRNq_xJ9xhvw?hl=pt-BR" },
+      { title: "Quarto Mistério Gozozo", description: "Apresentação do Menino Jesus no Templo.", link: "https://pt.wikipedia.org/wiki/Apresenta%C3%A7%C3%A3o_de_Jesus_no_Templo#/media/Ficheiro:Symeon_i_Nikolai_kyrka.jpg" },
+      { title: "Quinto Mistério Gozozo", description: "O encontro de Jesus no Templo, após ser perdido pelos pais.", link: "https://en.wikipedia.org/wiki/Finding_in_the_Temple#/media/File:Disputa_con_los_doctores_(El_Veron%C3%A9s)_grande.jpg" },
+    ]
+  },
+  {
+    grupo: "Mistérios Luminosos", misterios: [
+      { title: "1º Mistério Luminoso", description: "Batismo de Jesus no Rio Jordão." },
+      { title: "2º Mistério Luminoso", description: "Milagre nas Bodas de Caná." },
+      { title: "3º Mistério Luminoso", description: "Anúncio do Reino e convite à conversão." },
+      { title: "4º Mistério Luminoso", description: "Transfiguração de Jesus." },
+      { title: "5º Mistério Luminoso", description: "Instituição da Eucaristia." },
+    ]
+  },
+  {
+    grupo: "Mistérios Dolorosos", misterios: [
+      { title: "1º Mistério Doloroso", description: "Agonia de Jesus no Jardim das Oliveiras." },
+      { title: "2º Mistério Doloroso", description: "Flagelação de Jesus." },
+      { title: "3º Mistério Doloroso", description: "Coroação de espinhos." },
+      { title: "4º Mistério Doloroso", description: "Jesus carrega a cruz para o Calvário." },
+      { title: "5º Mistério Doloroso", description: "Crucificação e morte de Jesus." },
+    ]
+  },
+  {
+    grupo: "Mistérios Gloriosos", misterios: [
+      { title: "1º Mistério Glorioso", description: "Ressurreição de Jesus." },
+      { title: "2º Mistério Glorioso", description: "Ascensão de Jesus aos céus." },
+      { title: "3º Mistério Glorioso", description: "Vinda do Espírito Santo sobre Maria e os Apóstolos." },
+      { title: "4º Mistério Glorioso", description: "Assunção de Maria aos céus." },
+      { title: "5º Mistério Glorioso", description: "Coroação de Nossa Senhora como Rainha do céu e da terra." },
+    ]
+  },
 ];
 
-export default function TercoMariano() {
+export default function Rosario() {
   const [selectedMisterio, setSelectedMisterio] = useState(null);
 
-  
   return (
     <div className="min-h-screen relative flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 text-gray-800 overflow-hidden p-6">
       <Image
@@ -36,20 +63,25 @@ export default function TercoMariano() {
         <h1 className="text-4xl font-bold mb-4">Rosário</h1>
         <p className="text-center mb-6">Clique nos mistérios para refletir e rezar.</p>
 
-        <div className="flex flex-wrap justify-center gap-4">
-          {misterios.map((misterio, index) => (
-            <motion.button
-              key={index}
-              className="bg-white shadow-lg rounded-xl p-4 w-40 h-40 flex flex-col items-center justify-center hover:bg-blue-400 hover:text-white transition"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setSelectedMisterio(misterio)}
-            >
-              <GiPrayerBeads size={40} />
-              <span className="mt-2 font-semibold">{misterio.title}</span>
-            </motion.button>
-          ))}
-        </div>
+        {misterios.map((grupo, idx) => (
+          <div key={idx} className="mb-8">
+            <h2 className="text-2xl font-semibold my-4 text-center">{grupo.grupo}</h2>
+            <div className="flex flex-wrap justify-center gap-4">
+              {grupo.misterios.map((misterio, index) => (
+                <motion.button
+                  key={index}
+                  className="bg-white shadow-lg rounded-xl p-4 w-40 h-40 flex flex-col items-center justify-center hover:bg-blue-400 hover:text-white transition"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setSelectedMisterio(misterio)}
+                >
+                  <GiPrayerBeads size={40} />
+                  <span className="mt-2 font-semibold">{misterio.title}</span>
+                </motion.button>
+              ))}
+            </div>
+          </div>
+        ))}
 
         <AnimatePresence>
           {selectedMisterio && (
@@ -69,9 +101,8 @@ export default function TercoMariano() {
               >
                 <h2 className="text-2xl font-bold mb-2">{selectedMisterio.title}</h2>
                 <p className="text-gray-700 mb-4">{selectedMisterio.description}</p>
-
                 <a
-                  href="https://artsandculture.google.com/"
+                  href={selectedMisterio.link || "#"}
                   target="_blank"
                   className="text-blue-500 underline hover:text-blue-700 block mb-4"
                 >
@@ -79,7 +110,7 @@ export default function TercoMariano() {
                 </a>
 
                 <button
-                  className="mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded"
+                  className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded"
                   onClick={() => setSelectedMisterio(null)}
                 >
                   Fechar
