@@ -6,6 +6,7 @@ import { useState } from "react";
 import { FaPrayingHands } from "react-icons/fa";
 import { CiMedicalCross } from "react-icons/ci";
 import { GiPrayerBeads } from "react-icons/gi"; 
+import Image from "next/image";
 export default function Home() {
   const [tercos] = useState([
     { name: "Terço Mariano", icon: <GiPrayerBeads />, link: "/terco-mariano" },
@@ -37,6 +38,17 @@ export default function Home() {
           </motion.div>
         ))}
       </div>
+      <footer className="w-full py-4 mt-10 bg-blue-200 text-center text-gray-800 font-semibold flex flex-col items-center">
+  <p>Visite também</p>
+  <Link href="https://gochamaviva.org" className="text-blue-600 hover:underline flex flex-col items-center">
+    <Image src="/logo-chamaviva.png" alt="Chamaviva" width={150} height={50} />
+    Chamaviva.org
+  </Link>
+</footer>
+
+
+
     </div>
+    
   );
 }

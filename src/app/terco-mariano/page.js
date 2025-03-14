@@ -19,11 +19,11 @@ const misterios = [
   },
   {
     grupo: "Mistérios Luminosos", misterios: [
-      { title: "1º Mistério Luminoso", description: "Batismo de Jesus no Rio Jordão." },
-      { title: "2º Mistério Luminoso", description: "Milagre nas Bodas de Caná." },
-      { title: "3º Mistério Luminoso", description: "Anúncio do Reino e convite à conversão." },
-      { title: "4º Mistério Luminoso", description: "Transfiguração de Jesus." },
-      { title: "5º Mistério Luminoso", description: "Instituição da Eucaristia." },
+      { title: "1º Mistério Luminoso", description: "Batismo de Jesus no Rio Jordão.",link: "https://artsandculture.google.com/asset/batismo-de-jesus-almeida-j%C3%BAnior/DQFbX2vqOV9mNg?hl=en" },
+      { title: "2º Mistério Luminoso", description: "Milagre nas Bodas de Caná.",link: "https://artsandculture.google.com/asset/the-wedding-at-cana-paolo-veronese-byname-of-paolo-caliari-1528-1588-paris-mus%C3%A9e-du-louvre/7AEwlrXUn2yPcw?hl=en" },
+      { title: "3º Mistério Luminoso", description: "Anúncio do Reino e convite à conversão.",link:"https://pt.wikipedia.org/wiki/Serm%C3%A3o_da_Montanha#/media/Ficheiro:Bloch-SermonOnTheMount.jpg"},
+      { title: "4º Mistério Luminoso", description: "Transfiguração de Jesus.",link:"https://pt.wikipedia.org/wiki/Transfiguração_(Rafael)#/media/Ficheiro:Transfiguration_Raphael.jpg" },
+      { title: "5º Mistério Luminoso", description: "Instituição da Eucaristia.",Link: "https://pt.wikipedia.org/wiki/Transfiguração_(Rafael)#/media/Ficheiro:Transfiguration_Raphael.jpg"},
     ]
   },
   {
