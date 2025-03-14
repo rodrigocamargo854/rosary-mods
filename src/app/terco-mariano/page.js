@@ -10,11 +10,11 @@ import Link from 'next/link';
 const misterios = [
   {
     grupo: "Mistérios Gozosos", misterios: [
-      { title: "Primeiro Mistério Gozozo", description: "Anunciação, a Visitação, o Nascimento, a Apresentação de Jesus no Templo e a Perda e Encontro de Jesus no Templo", link: "https://pt.wikipedia.org/wiki/Anuncia%C3%A7%C3%A3o#/media/Ficheiro:Botticelli,_annunciazione_del_Metropolitan.jpg" },
-      { title: "Segundo Mistério Gozozo", description: "Visita de Maria à sua prima Isabel.", link: "https://i.pinimg.com/736x/47/c9/77/47c97799a3b452ff9b2e98ceccc7474e.jpg " },
-      { title: "Terceiro Mistério Gozozo", description: "Nascimento de Jesus em Belém.", link: "https://artsandculture.google.com/story/cQVRNq_xJ9xhvw?hl=pt-BR" },
-      { title: "Quarto Mistério Gozozo", description: "Apresentação do Menino Jesus no Templo.", link: "https://pt.wikipedia.org/wiki/Apresenta%C3%A7%C3%A3o_de_Jesus_no_Templo#/media/Ficheiro:Symeon_i_Nikolai_kyrka.jpg" },
-      { title: "Quinto Mistério Gozozo", description: "O encontro de Jesus no Templo, após ser perdido pelos pais.", link: "https://en.wikipedia.org/wiki/Finding_in_the_Temple#/media/File:Disputa_con_los_doctores_(El_Veron%C3%A9s)_grande.jpg" },
+      { title: "Primeiro Mistério Gozoso", description: "Anunciação, a Visitação, o Nascimento, a Apresentação de Jesus no Templo e a Perda e Encontro de Jesus no Templo", link: "https://pt.wikipedia.org/wiki/Anuncia%C3%A7%C3%A3o#/media/Ficheiro:Botticelli,_annunciazione_del_Metropolitan.jpg" },
+      { title: "Segundo Mistério Gozoso", description: "Visita de Maria à sua prima Isabel.", link: "https://i.pinimg.com/736x/47/c9/77/47c97799a3b452ff9b2e98ceccc7474e.jpg " },
+      { title: "Terceiro Mistério Gozoso", description: "Nascimento de Jesus em Belém.", link: "https://artsandculture.google.com/story/cQVRNq_xJ9xhvw?hl=pt-BR" },
+      { title: "Quarto Mistério Gozoso", description: "Apresentação do Menino Jesus no Templo.", link: "https://pt.wikipedia.org/wiki/Apresenta%C3%A7%C3%A3o_de_Jesus_no_Templo#/media/Ficheiro:Symeon_i_Nikolai_kyrka.jpg" },
+      { title: "Quinto Mistério Gozoso", description: "O encontro de Jesus no Templo, após ser perdido pelos pais.", link: "https://en.wikipedia.org/wiki/Finding_in_the_Temple#/media/File:Disputa_con_los_doctores_(El_Veron%C3%A9s)_grande.jpg" },
     ]
   },
   {
