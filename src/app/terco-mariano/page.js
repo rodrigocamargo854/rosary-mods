@@ -10,11 +10,11 @@ import Link from 'next/link';
 const misterios = [
   {
     grupo: "Mistérios Gozosos", misterios: [
-      { title: "Primeiro Mistério Gozoso", description: "Anunciação, a Visitação, o Nascimento, a Apresentação de Jesus no Templo e a Perda e Encontro de Jesus no Templo", link: "https://pt.wikipedia.org/wiki/Anuncia%C3%A7%C3%A3o#/media/Ficheiro:Botticelli,_annunciazione_del_Metropolitan.jpg" },
-      { title: "Segundo Mistério Gozoso", description: "Visita de Maria à sua prima Isabel.", link: "https://i.pinimg.com/736x/47/c9/77/47c97799a3b452ff9b2e98ceccc7474e.jpg " },
+      { title: "Primeiro Mistério Gozoso", description: "Anunciação do anjo a nossa senhora", link: "https://pt.wikipedia.org/wiki/Anuncia%C3%A7%C3%A3o#/media/Ficheiro:Botticelli,_annunciazione_del_Metropolitan.jpg" },
+      { title: "Segundo Mistério Gozoso", description: "Visita de Nossa Senhora à sua prima Isabel.", link: "https://i.pinimg.com/736x/47/c9/77/47c97799a3b452ff9b2e98ceccc7474e.jpg " },
       { title: "Terceiro Mistério Gozoso", description: "Nascimento de Jesus em Belém.", link: "https://artsandculture.google.com/story/cQVRNq_xJ9xhvw?hl=pt-BR" },
       { title: "Quarto Mistério Gozoso", description: "Apresentação do Menino Jesus no Templo.", link: "https://pt.wikipedia.org/wiki/Apresenta%C3%A7%C3%A3o_de_Jesus_no_Templo#/media/Ficheiro:Symeon_i_Nikolai_kyrka.jpg" },
-      { title: "Quinto Mistério Gozoso", description: "O encontro de Jesus no Templo, após ser perdido pelos pais.", link: "https://en.wikipedia.org/wiki/Finding_in_the_Temple#/media/File:Disputa_con_los_doctores_(El_Veron%C3%A9s)_grande.jpg" },
+      { title: "Quinto Mistério Gozoso", description: "O encontro de Jesus no Templo entre os doutrores da lei.", link: "https://en.wikipedia.org/wiki/Finding_in_the_Temple#/media/File:Disputa_con_los_doctores_(El_Veron%C3%A9s)_grande.jpg" },
     ]
   },
   {
@@ -22,13 +22,13 @@ const misterios = [
       { title: "1º Mistério Luminoso", description: "Batismo de Jesus no Rio Jordão.",link: "https://artsandculture.google.com/asset/batismo-de-jesus-almeida-j%C3%BAnior/DQFbX2vqOV9mNg?hl=en" },
       { title: "2º Mistério Luminoso", description: "Milagre nas Bodas de Caná.",link: "https://artsandculture.google.com/asset/the-wedding-at-cana-paolo-veronese-byname-of-paolo-caliari-1528-1588-paris-mus%C3%A9e-du-louvre/7AEwlrXUn2yPcw?hl=en" },
       { title: "3º Mistério Luminoso", description: "Anúncio do Reino e convite à conversão.",link:"https://pt.wikipedia.org/wiki/Serm%C3%A3o_da_Montanha#/media/Ficheiro:Bloch-SermonOnTheMount.jpg"},
-      { title: "4º Mistério Luminoso", description: "Transfiguração de Jesus.",link:"https://pt.wikipedia.org/wiki/Transfiguração_(Rafael)#/media/Ficheiro:Transfiguration_Raphael.jpg" },
-      { title: "5º Mistério Luminoso", description: "Instituição da Eucaristia.",Link: "https://pt.wikipedia.org/wiki/Transfiguração_(Rafael)#/media/Ficheiro:Transfiguration_Raphael.jpg"},
+      { title: "4º Mistério Luminoso", description: "Transfiguração de Jesus no monte Tabor.",link:"https://pt.wikipedia.org/wiki/Transfiguração_(Rafael)#/media/Ficheiro:Transfiguration_Raphael.jpg" },
+      { title: "5º Mistério Luminoso", description: "Instituição da Eucaristia e a última ceia.",Link: "https://pt.wikipedia.org/wiki/Transfiguração_(Rafael)#/media/Ficheiro:Transfiguration_Raphael.jpg"},
     ]
   },
   {
     grupo: "Mistérios Dolorosos", misterios: [
-      { title: "1º Mistério Doloroso", description: "Agonia de Jesus no Jardim das Oliveiras." },
+      { title: "1º Mistério Doloroso", description: "Agonia de Jesus no Horto das Oliveiras." },
       { title: "2º Mistério Doloroso", description: "Flagelação de Jesus." },
       { title: "3º Mistério Doloroso", description: "Coroação de espinhos." },
       { title: "4º Mistério Doloroso", description: "Jesus carrega a cruz para o Calvário." },
