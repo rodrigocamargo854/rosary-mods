@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Terço Bizantino App
+
+A modern web application designed for a digital prayer experience of the Byzantine Rosary. Built with Next.js, Tailwind CSS, and Framer Motion, it offers a clean, minimal, and interactive way to meditate through daily jaculatory prayers.
+
+## Overview
+
+This app allows users to select specific sets of prayers based on different days of the week. Each mystery opens a meditative flow, including progress tracking for repetitions. The experience is designed to be peaceful, focused, and mobile-first.
+
+## Features
+
+- Interactive UI with smooth animations (Framer Motion)
+- Displays mysteries organized by day (Monday, Tuesday, Friday, Saturday)
+- Dynamic progress indicator for each prayer (10 repetitions)
+- Modal popup with focus lock for each selected mystery
+- Fully responsive design
+- Light performance, optimized images (Next/Image)
+
+## Tech Stack
+
+- Next.js
+- Tailwind CSS
+- Framer Motion
+- React Icons
+- Vercel (optional for deployment)
+
+## Project Structure
+
+```
+/app
+/components         # UI Components (if created)
+/public             # Static assets (images)
+/styles             # TailwindCSS config and global styles
+/pages              # Next.js routes
+```
+
+## API / Data
+
+All prayer data is hardcoded in the component as an array of objects:
+
+```js
+const misterios = [
+  {
+    grupo: "(segunda-feira)",
+    misterios: [
+      { title: "1ª Jaculatória", description: "Jesus, me ajuda" },
+      ...
+    ]
+  },
+  ...
+];
+```
 
 ## Getting Started
 
-First, run the development server:
+1. Clone this repository:
+
+```bash
+git clone https://github.com/yourusername/terco-bizantino.git
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open your browser and navigate to:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
 
-## Learn More
+Deploy easily with platforms like **Vercel**, **Netlify**, or your hosting provider.
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+MIT License. Free to use and modify.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Credits
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Inspired by the tradition of the Byzantine Rosary. All prayers and formulas used here are adapted for personal meditation purposes.
